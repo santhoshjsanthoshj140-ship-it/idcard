@@ -1,0 +1,118 @@
+<html>
+<head>
+    <title>STUDENT ID CARD</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .id-card {
+            width: 375px;
+            height: 500px;
+            perspective: 1000px; /* Needed for 3D flip */
+        }
+        .id-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+        .id-card:hover .id-card-inner {
+            transform: rotateY(180deg);
+        }
+        .id-card-front, .id-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            box-shadow: 5px 6px 12px rgba(0,0,0,0.3);
+            background: white;
+        }
+        .id-card-front {
+            text-align: center;
+            padding: 15px;
+        }
+        .college-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: red;
+            margin-bottom: 10px;   
+        }
+        .student-photo {
+            width: 100px;
+            height: 100px;
+            border: 2px solid blue;
+            margin: 10px 0;
+            object-fit: cover;
+        }
+        .details {
+            text-align: left;
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        .details p {
+            margin: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
+        .signature {
+            display:flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding: 0 20px;
+        }
+        .hod, .principal {
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .id-card-back {
+            padding: 20px;
+            font-size: 14px;
+            line-height: 1.5; 
+            transform: rotateY(180deg);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="id-card">
+        <div class="id-card-inner">
+            <!-- FRONT SIDE -->
+            <div class="id-card-front">
+                <div class="college-name">C.S.I VELLORE DIOCESE</div>
+                <h4><b>VOORHEES COLLEGE</b></h4>
+                <div class="photo-container">
+                    <img src="santhosh.jpg" class="student-photo">
+                </div>
+                <div class="details">
+                    <p><b>NAME:</b> PRADEESH.M</p>
+                    <p><b>REG NO:</b> 32324U18032</p>
+                    <p><b>DEPARTMENT:</b> B.Sc Computer Science</p>
+                    <p><b>YEAR:</b> 2nd YEAR</p>
+                    <p><b>BATCH:</b> 2024-2027</p>
+                </div>
+                <div class="signature">
+                    <div class="hod">H.O.D</div>
+                    <div class="principal">PRINCIPAL</div>
+                </div>
+            </div>
+            <!-- BACK SIDE -->
+            <div class="id-card-back">
+                <br>
+                <br>
+                <br>
+                <P><left><b>BLOOD:</b>O+</left></P>
+                <p>ADDRESS: KANNAMANGALAM GATE </p>
+                <p>Contact: +91 6574545845</p>
+                <p>Email:godwarrior106@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
